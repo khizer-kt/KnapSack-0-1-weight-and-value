@@ -1,4 +1,6 @@
 #PYTHON3
+import time
+start_time = time.time()
 def knap(v,w,C,list_name):
     N=len(v)
     m={}
@@ -46,4 +48,4 @@ wt = list_weight
 W = weight
 print("")
 print(knap(val,wt,W,list_name))
- 
+print("Time take in microseconds:", (time.time() - start_time)/10**6) 
