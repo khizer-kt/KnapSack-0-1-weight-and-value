@@ -15,11 +15,16 @@ def knap(v,w,C,list_name):
  
     c = C
     temp=0
+    empt=[]
     for i in range(N, 0, -1):
         if m[(i,c)] != m[(i-1,c)]:
-            print(f'{str(list_name[i-1])}, {w[i-1]}, {v[i-1]}')
+            a=[str(list_name[i-1]), w[i-1], v[i-1]]
             c -= w[i-1]
             temp=temp+w[i-1]
+            empt.append(a)
+    empt.reverse()
+    for i in empt:
+        print(*i,sep=';')
     print("Final weight:",temp)
     print( "Final value:",m[(N,C)] ) #best value
     return ""
