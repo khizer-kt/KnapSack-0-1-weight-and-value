@@ -3,7 +3,7 @@ import time
 start_time = time.time()
 def knap(v,w,C,list_name):
     N=len(v)
-    m={}
+    m={} #empty dict
     for c in range(C+1):
         m[(0,c)]=0
     for i in range(1,N+1):
